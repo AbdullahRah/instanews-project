@@ -1,0 +1,31 @@
+{
+  "name": "gulp-star",
+  "version": "1.0.0",
+  "description": "My fisrt Gulp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "echo 'Hello'"
+  },
+  "keywords": [
+    "gulp",
+    "node",
+    "npm"
+  ],
+  "author": "Abdullah",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

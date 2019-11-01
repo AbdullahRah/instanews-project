@@ -32,6 +32,7 @@ p {
   justify-content: flex-start;
   align-content: center;
   align-items: center;
+
   @include breakpoint($desktop) {
     background: red;
   }

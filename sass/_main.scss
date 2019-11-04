@@ -32,10 +32,12 @@ p {
   justify-content: flex-start;
   align-content: center;
   align-items: center;
+  // align-content: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
 
-  @include breakpoint($desktop) {
-    background: red;
-  }
+  padding: 38px;
 }
 .screen-reader {
   top: -50%;
@@ -72,7 +74,7 @@ p {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     article {
       background-size: cover;
       background-repeat: no-repeat;
@@ -92,6 +94,16 @@ p {
         background-color: rgba(0, 0, 0, 0.574);
         padding: 5% 3%;
       }
+    }
+  }
+  @include tablet {
+    .stories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include desktop {
+    .stories {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -114,48 +126,55 @@ p {
   }
 }
 //********MOBILE VIEW STARTS HERE**********************
-@media only screen and (max-width: 400px) {
-  // .site-header {
-  //   flex-flow: column nowrap;
-  //   padding: 5% 0;
-  //   .search-form-inner {
-  //     p {
-  //       font-size: 3vmax;
-  //     }
-  //     select {
-  //       margin-top: 5%;
-  //       width: 100%;
-  //       font-size: 2.5vmax;
-  //     }
-  //   }
-  // }
-  .story-grid {
-    width: 100%;
-    .stories {
-      width: 100%;
-      display: flex;
-      flex-flow: column nowrap;
-      a {
-        width: 100%;
-        article {
-          p {
-            font-size: 2vmax;
-            word-wrap: break-word;
-          }
-        }
-      }
+// @media only screen and (max-width: 400px) {
+// .site-header {
+//   flex-flow: column nowrap;
+//   padding: 5% 0;
+//   .search-form-inner {
+//     p {
+//       font-size: 3vmax;
+//     }
+//     select {
+//       margin-top: 5%;
+//       width: 100%;
+//       font-size: 2.5vmax;
+//     }
+//   }
+// }
+// .story-grid {
+//   width: 100%;
+//   .stories {
+//     width: 100%;
+//     display: flex;
+//     flex-flow: column nowrap;
+//     a {
+//       width: 100%;
+//       article {
+//         p {
+//           font-size: 2vmax;
+//           word-wrap: break-word;
+//         }
+//       }
+//     }
+//   }
+// }
+.site-footer {
+  padding: 3% 0;
+  transition: 0.3s ease;
+  .copyright {
+    p {
+      text-align: center;
+      align-self: center;
+      padding: 0;
+      margin: 0;
     }
-  }
-  .site-footer {
-    padding: 3% 0;
-    transition: 0.3s ease;
-    .copyright {
+
+    @include tablet {
+      flex-direction: column;
       p {
-        text-align: center;
-        align-self: center;
-        padding: 0;
-        margin: 0;
+        font-size: 16px;
       }
     }
   }
 }
+// }
